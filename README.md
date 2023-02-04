@@ -30,7 +30,7 @@
 [【新人プログラマ応援】開発タスクをアサインされたらどういう手順で進めるべきか](https://qiita.com/jnchito/items/017487cd882091494298)
 
 
-## 便利なメソッド・
+## 便利なメソッド等のまとめ
 
 ### モデル・DB系はここら辺押さえておくと良さそう
 - [scope](https://qiita.com/ngron/items/14a39ce62c9d30bf3ac3)
@@ -43,7 +43,6 @@
 - [Railsで変数の中身が空か確認する空チェックメソッド4種](https://materializer.co/lab/blog/27)
 - to_sql→ActiveRecordのオブジェクトに対して使うことでSQLを見ることができる(主にデバックで確認するように使う)
 - inspect→ActiveRecordのオブジェクトに対して使うことでオブジェクトの中身を確認できる(主にデバックで確認するように使う・めっちゃおすすめ)
-- 
 
 
 
@@ -79,5 +78,6 @@
 - [rails-runnerに引数を持たせる方法](http://nomnel.net/blog/rails-runner-keyword-arg/)
 - [CanCanCanで特定のユーザーがアクセスできるリソースを制限する](http://319ring.net/blog/archives/2179/)
 - [decoratorの使い方](https://qiita.com/ykemoemo/items/b2c5c68f853a5cc91446)
+
 （例）Viewに関係するメソッドでかつModelに関係するメソッドの記述
 ユーザーの名前とかのフォーマットetc
