@@ -69,6 +69,8 @@
 - [find_by_sqlでRailsから生SQLクエリを直接実行する](https://qiita.com/natsuokawai/items/7bc330e9a6f6f4ef0359)
 
   (基本的にRailsで既存であるメソッドでSQLを組むことを推奨)
+  
+  
   (どうしても厳しい場合や複雑なSQLを組むときはプレースホルダー等を用いて動的に変更できるようなSQLを書いていく)
 
 ### ソースコードの書き方
@@ -100,7 +102,6 @@
   User.name→この値を取得できるのもgetterメソッドのおかげ
 
 - [I18nで日本語化まとめ](https://qiita.com/Kta-M/items/bd4ba36a58ad602a9d8b)
-[i18nで引数を渡して動的にする](https://takuyan.hatenablog.com/entry/20111120/1321741426)
+- [i18nで引数を渡して動的にする](https://takuyan.hatenablog.com/entry/20111120/1321741426)
 
 - [ラッパークラスの概念](https://wa3.i-3-i.info/word191.html)
-
