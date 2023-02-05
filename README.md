@@ -38,18 +38,6 @@
 - [polymorphic](https://qiita.com/sibakenY/items/7d984267995e8ce408c2)
 - [inverse_of](https://www.sejuku.net/blog/66868)
 
-### その他の便利なメソッド
-- pluck
-- all?
-- [Railsで変数の中身が空か確認する空チェックメソッド4種](https://materializer.co/lab/blog/27)
-- to_sql→ActiveRecordのオブジェクトに対して使うことでSQLを見ることができる(主にデバックで確認するように使う)
-- inspect→ActiveRecordのオブジェクトに対して使うことでオブジェクトの中身を確認できる(主にデバックで確認するように使う・めっちゃおすすめ)
-- [配列の要素と何番目にあるかを一緒に取り出す_each_with_indexメソッド](https://satoru103.hatenablog.com/entry/2020/02/09/225503)
-- [ぼっち演算子でNIlエラーを回避する](https://qiita.com/yoshi_4/items/e987b698c1978d248cfc)(割と使う)
-
-
-
-
 ### SQLを扱うならここら辺押さえておくと良さそう
 
 - N+1対策はここら辺を使えば問題ない（includes・preload・eager_load）
@@ -75,24 +63,19 @@
 - [SQLをRailsで扱う時の色々な便利なもの](https://qiita.com/yut_h1979/items/4cb3d9a3b3fc87ca0435)
 - [find_by_sqlでRailsから生SQLクエリを直接実行する](https://qiita.com/natsuokawai/items/7bc330e9a6f6f4ef0359)
 
-  (基本的にRailsで既存であるメソッドでSQLを組むことを推奨)
+  (基本的にRailsに既存であるメソッドでSQLを組むことを推奨)
 
 
   (どうしても厳しい場合や複雑なSQLを組むときはプレースホルダー等を用いて動的に変更できるようなSQLを書いていく)
 
-### ソースコードの書き方
-
-
-
-
-## ソースコードの読み方
-
-## プログラミングの考え方編
-[中／大規模開発のためのRails設計パターン](https://qiita.com/ktsujichan/items/2899d337ecbd90474c46)
-
-### エラーが出たときはログを確認
-バックエンドORフロントエンドどちらでエラーが出ているか？
-
+### その他の便利なメソッド
+- pluck
+- all?
+- [Railsで変数の中身が空か確認する空チェックメソッド4種](https://materializer.co/lab/blog/27)
+- to_sql→ActiveRecordのオブジェクトに対して使うことでSQLを見ることができる(主にデバックで確認するように使う)
+- inspect→ActiveRecordのオブジェクトに対して使うことでオブジェクトの中身を確認できる(主にデバックで確認するように使う・めっちゃおすすめ)
+- [配列の要素と何番目にあるかを一緒に取り出す_each_with_indexメソッド](https://satoru103.hatenablog.com/entry/2020/02/09/225503)
+- [ぼっち演算子でNIlエラーを回避する](https://qiita.com/yoshi_4/items/e987b698c1978d248cfc)(割と使う)
 
 ### その他実務で見たもの
 - [バッチの実行方法などで使う(rails-runner)](https://qiita.com/port-development/items/61c0f74c123955f45f8e)
@@ -112,3 +95,17 @@
 - [i18nで引数を渡して動的にする](https://takuyan.hatenablog.com/entry/20111120/1321741426)
 
 - [ラッパークラスの概念](https://wa3.i-3-i.info/word191.html)
+
+## プログラミングの考え方編
+[中／大規模開発のためのRails設計パターン](https://qiita.com/ktsujichan/items/2899d337ecbd90474c46)
+
+### ソースコードの書き方
+- 変数名は既存と命名規則等合っているか
+- 処理を書くときはどのファイルに書くかを気をつける
+
+### ソースコードの読み方
+
+
+
+### エラーの対処方
+- エラーが出たときはバックエンドORフロントエンドどちらでエラーが出ているか？
