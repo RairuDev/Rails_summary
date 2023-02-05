@@ -30,7 +30,7 @@
 [【新人プログラマ応援】開発タスクをアサインされたらどういう手順で進めるべきか](https://qiita.com/jnchito/items/017487cd882091494298)
 
 
-## 便利なメソッド等のまとめ
+## 便利なメソッド等のまとめ(Ruby,Rails)
 
 ### モデル・DB（リレーション）周りはここら辺押さえておくと良さそう
 - [scope](https://qiita.com/ngron/items/14a39ce62c9d30bf3ac3)
@@ -44,8 +44,15 @@
 - [ActiveRecordのjoinsとpreloadとincludesとeager_loadの違い](https://qiita.com/k0kubun/items/80c5a5494f53bb88dc58)
 - [joins](https://qiita.com/yuyasat/items/c2ad37b5a24a58ee3d30)
 - この記事も良さそう[joinsメソッドの使い方 ~ テーブル結合からネストまで学ぶ](https://pikawaka.com/rails/joins)
-- 生のSQLをRailsで使う
-= <<-"EOS"
+- Joinの注意点(joinsメソッドの基本的な使い方は、joinsメソッドを実行したモデルのレコードを取得するもので関連付けしたデータは取得していない)
+- Joinでリレーション先のテーブルのカラムを取得する方法
+```
+モデル名.joins(:アソシエーションの名前).select("アソシエーションの名前.取得したいカラム名")
+カラム名がかぶる場合は、select内で名前付けをする。
+ASで名前づけ
+モデル名.joins(:アソシエーションの名前).select("アソシエーションの名前.取得したいカラム名 AS 任意の名前")
+```
+- [orderで関連テーブルのカラムで並び替え](https://zenn.dev/a_da_chi/articles/a2d08c17347289)
 - [eachは空の配列でも[]でも対応可能だから、条件分岐等で場合分けは不要](https://teratail.com/questions/168508)
 
   (個人的にDBから取得したデータをView側表示する際に使う機会が多い気がしている)
