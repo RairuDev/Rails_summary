@@ -64,7 +64,7 @@
 - [where](https://www.sejuku.net/blog/13363)
 
  割とwhereはこんな書き方をするのが多いイメージ(User.where("name = ?", @name))
- 
+
  whereを複数使うやり方(User.where(kind: 0).where(name: ‘yamada’))
 
 
