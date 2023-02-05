@@ -25,7 +25,7 @@
 
 - PRを作成する先を間違ってはいないか
 
-## まずチケットに取り掛かる前に、下記の記事を読んでおくと良さそう
+### まずチケットに取り掛かる前に、下記の記事を読んでおくと良さそう
 
 [【新人プログラマ応援】開発タスクをアサインされたらどういう手順で進めるべきか](https://qiita.com/jnchito/items/017487cd882091494298)
 
@@ -44,7 +44,7 @@
 - [Railsで変数の中身が空か確認する空チェックメソッド4種](https://materializer.co/lab/blog/27)
 - to_sql→ActiveRecordのオブジェクトに対して使うことでSQLを見ることができる(主にデバックで確認するように使う)
 - inspect→ActiveRecordのオブジェクトに対して使うことでオブジェクトの中身を確認できる(主にデバックで確認するように使う・めっちゃおすすめ)
-- [配列の要素と何番目にあるかを一緒に取り出す_each_with_indexメソッド]（https://satoru103.hatenablog.com/entry/2020/02/09/225503）
+- [配列の要素と何番目にあるかを一緒に取り出す_each_with_indexメソッド](https://satoru103.hatenablog.com/entry/2020/02/09/225503)
 - [ぼっち演算子でNIlエラーを回避する](https://qiita.com/yoshi_4/items/e987b698c1978d248cfc)(割と使う)
 
 
@@ -99,10 +99,8 @@
   (Railsでのマイグレーションファイルを作成する際にも自動で使われているはず)
   User.name→この値を取得できるのもgetterメソッドのおかげ
 
-- I18nで日本語化する
-i18nの使い方（引数渡す）
-I18n.t(:hello_user, scope: "dictionary.messages", user_name: "ヤマダ")
-hello_user: 'こんにちは%{user_name}さん'
+- [I18nで日本語化まとめ](https://qiita.com/Kta-M/items/bd4ba36a58ad602a9d8b)
+[i18nで引数を渡して動的にする](https://takuyan.hatenablog.com/entry/20111120/1321741426)
 
 - [ラッパークラスの概念](https://wa3.i-3-i.info/word191.html)
 
