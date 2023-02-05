@@ -60,7 +60,14 @@
 = <<-"EOS"
 - [eachは空の配列でも[]でも対応可能だから、条件分岐等で場合分けは不要](https://teratail.com/questions/168508)
 
-  (個人的にView側で使う機会が多い気がしている)
+  (個人的にDBから取得したデータをView側表示する際に使う機会が多い気がしている)
+- [where](https://www.sejuku.net/blog/13363)
+
+ 割とwhereはこんな書き方をするのが多いイメージ(User.where("name = ?", @name))
+ 
+ whereを複数使うやり方(User.where(kind: 0).where(name: ‘yamada’))
+
+
 - map(個人的にはあまりSQLで使う印象はないカナー)
 - [論理削除したデータを扱う](https://www.task-notes.com/entry/20170813/1502618254)
 - [関連テーブルの条件をON句に書きたい！](https://blog.logicoffee.tech/posts/programming/scoped-association.html)
