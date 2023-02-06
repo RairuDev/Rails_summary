@@ -104,7 +104,9 @@ ASで名前づけ
 
 - all?
 
-- [map](https://qiita.com/s_tatsuki/items/869af9c0c33d9d650f3f)
+- [map](https://pikawaka.com/ruby/map)
+
+- [mapは体感(&:)の書き方が多い](https://qiita.com/s_tatsuki/items/869af9c0c33d9d650f3f)
 
 - [Railsで変数の中身が空か確認する空チェックメソッド4種](https://materializer.co/lab/blog/27)
 
