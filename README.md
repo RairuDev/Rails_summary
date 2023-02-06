@@ -83,9 +83,6 @@ ASで名前づけ
 
  whereを複数使うやり方(User.where(kind: 0).where(name: ‘yamada’))
 
-
-- map(個人的にはあまりSQLで使う印象はないカナー)
-
 - [論理削除したデータを扱う](https://www.task-notes.com/entry/20170813/1502618254)
 
 - [関連テーブルの条件をON句に書きたい！](https://blog.logicoffee.tech/posts/programming/scoped-association.html)
@@ -106,6 +103,8 @@ ASで名前づけ
 - pluck
 
 - all?
+
+- [map](https://qiita.com/s_tatsuki/items/869af9c0c33d9d650f3f)
 
 - [Railsで変数の中身が空か確認する空チェックメソッド4種](https://materializer.co/lab/blog/27)
 
@@ -142,9 +141,11 @@ ASで名前づけ
 
 - [ラッパークラスの概念](https://wa3.i-3-i.info/word191.html)
 
-- [早期returnを使って無駄な処理をしない]()
+- [早期returnを使って無駄な処理をしない](https://zenn.dev/media_engine/articles/early_return)※記事はJSだけどRubyでもある
 
-- [module]()
+- [RubyのModuleの使い方](https://qiita.com/shiopon01/items/fd6803f792398c5219cd)※重要モジュールで名前空間やインスタンスの生成でinitializeとセットでよく使う
+
+- [initialize](https://www.sejuku.net/blog/21170)個人的にはモジュールとセットで使う印象・また、インスタンスを作成する時に使う印象が強い
 
 ## プログラミングの考え方編
 
