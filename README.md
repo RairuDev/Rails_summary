@@ -53,7 +53,7 @@
 
 - [accepts_nested_attributes_for](https://qiita.com/HIROKOBA/items/35b636005311b8384278)
 
-- [delegateの使い方]https://sakurawi.hateblo.jp/entry/delegate
+- [delegateの使い方](https://sakurawi.hateblo.jp/entry/delegate)
 
 
 ### SQLを扱うならここら辺押さえておくと良さそう
