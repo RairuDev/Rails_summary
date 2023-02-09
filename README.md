@@ -51,6 +51,11 @@
 
 - [inverse_of](https://www.sejuku.net/blog/66868)
 
+- [accepts_nested_attributes_for](https://qiita.com/HIROKOBA/items/35b636005311b8384278)
+
+- [delegateの使い方]https://sakurawi.hateblo.jp/entry/delegate
+
+
 ### SQLを扱うならここら辺押さえておくと良さそう
 
 - N+1対策はここら辺を使えば問題ない（includes・preload・eager_load）
@@ -148,6 +153,18 @@ ASで名前づけ
 - [RubyのModuleの使い方](https://qiita.com/shiopon01/items/fd6803f792398c5219cd)※重要モジュールで名前空間やインスタンスの生成でinitializeとセットでよく使う
 
 - [initialize](https://www.sejuku.net/blog/21170)個人的にはモジュールとセットで使う印象・また、インスタンスを作成する時に使う印象が強い
+
+- [class << self](https://qiita.com/TomoProg/items/23027a866beac66a40c6)
+
+- [concern](https://lanlib.com/2021/04/04/rails-concern%e3%81%ae%e4%bd%bf%e3%81%84%e6%96%b9/)
+
+- [include](https://style.potepan.com/articles/16207.html)※モジュールと使うことが多い
+
+- [Transaction](https://qiita.com/huydx/items/d946970d130b7dabe7ec)
+
+- [Redis](https://openstandia.jp/oss_info/redis/)
+
+- [sidekiq](https://dev.icare.jpn.com/dev_cat/sidekiq/)
 
 ## プログラミングの考え方編
 
