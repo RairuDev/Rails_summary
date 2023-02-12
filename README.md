@@ -166,6 +166,12 @@ ASで名前づけ
 
 - [sidekiq](https://dev.icare.jpn.com/dev_cat/sidekiq/)
 
+- [例外処理の書き方_raise](https://qiita.com/ngron/items/4c319ae7340b72c7e566)
+
+- [Cookieとセッションをちゃんと理解する](https://qiita.com/hththt/items/07136ad74127999df271)
+
+- [Web Storage](https://www.htmq.com/webstorage/)
+
 ## プログラミングの考え方編
 
 [中／大規模開発のためのRails設計パターン](https://qiita.com/ktsujichan/items/2899d337ecbd90474c46)
@@ -193,7 +199,7 @@ ASで名前づけ
 - あるページに対応するファイルを探すときは、日本語・特別な処理など、なるべく少なそうなものを全体検索かけるようにする
 
 
-### エラーの対処方
+### エラーの対処法
 
 - エラーが出たときはバックエンドORフロントエンドどちらでエラーが出ているかを確認する
 
