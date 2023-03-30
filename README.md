@@ -79,10 +79,6 @@ ASで名前づけ
 - [ActiveRecordにおけるGROUP BYの使い方](https://qiita.com/yuyasat/items/e26bcf0eb2c89c63db9d)
 - [orderで関連テーブルのカラムで並び替え](https://zenn.dev/a_da_chi/articles/a2d08c17347289)
 
-- [eachは空の配列でも[]でも対応可能だから、条件分岐等で場合分けは不要](https://teratail.com/questions/168508)
-
-  (個人的にDBから取得したデータをView側表示する際に使う機会が多い気がしている)
-
 - [where](https://www.sejuku.net/blog/13363)
 
  割とwhereはこんな書き方をするのが多いイメージ(User.where("name = ?", @name))
@@ -130,6 +126,8 @@ ASで名前づけ
 - [merge](https://qiita.com/TerToEer_sho/items/c445bad0a9726030d24c)
 
 - [html_safe](https://sakaishun.com/2022/03/25/rails-escape-view-tag)
+
+- [eachは空の配列でも[]でも対応可能だから、条件分岐等で場合分けは不要](https://teratail.com/questions/168508)
 
 
 
