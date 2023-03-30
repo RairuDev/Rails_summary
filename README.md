@@ -36,6 +36,8 @@
 
 [【新人プログラマ応援】開発タスクをアサインされたらどういう手順で進めるべきか](https://qiita.com/jnchito/items/017487cd882091494298)
 
+[Railsの案件にジョインしたときに、何を足掛かりにすべきか](https://qiita.com/Kirika/items/42d66e17d39fe944bf9d)
+
 
 ## 便利なメソッド等のまとめ(Ruby,Rails)
 
@@ -101,6 +103,9 @@ ASで名前づけ
 
 
   (どうしても厳しい場合や複雑なSQLを組むときはプレースホルダー等を用いて動的に変更できるようなSQLを書いていく)
+  
+- [GROUP BY](https://qiita.com/yuyasat/items/e26bcf0eb2c89c63db9d)
+  
 
 ### その他の便利なメソッド
 
@@ -121,6 +126,12 @@ ASで名前づけ
 - [配列の要素と何番目にあるかを一緒に取り出す_each_with_indexメソッド](https://satoru103.hatenablog.com/entry/2020/02/09/225503)
 
 - [ぼっち演算子でNIlエラーを回避する](https://qiita.com/yoshi_4/items/e987b698c1978d248cfc)(割と使う)
+
+- [merge](https://qiita.com/TerToEer_sho/items/c445bad0a9726030d24c)
+
+- [html_safe](https://sakaishun.com/2022/03/25/rails-escape-view-tag)
+
+
 
 ### その他実務で見たもの
 
@@ -157,6 +168,8 @@ ASで名前づけ
 
 - [concern](https://lanlib.com/2021/04/04/rails-concern%e3%81%ae%e4%bd%bf%e3%81%84%e6%96%b9/)
 
+- [ActiveSupport::Concern](https://qiita.com/h-shima/items/d772b4cbe7368ddb8255)
+
 - [include](https://style.potepan.com/articles/16207.html)※モジュールと使うことが多い
 
 - [Transaction](https://qiita.com/huydx/items/d946970d130b7dabe7ec)
@@ -174,6 +187,14 @@ ASで名前づけ
 - [Web Storage](https://www.htmq.com/webstorage/)
 
 - [update_attributes](https://www.sejuku.net/blog/62009)
+
+- [freeze](https://qiita.com/yukiyan/items/39f945c55b6dc5e11ed7)
+
+- [private と protected の使い方まとめ](https://26gram.com/private-protected-in-ruby#:~:text=%E8%A8%AD%E5%AE%9A%E3%81%95%E3%82%8C%E3%82[…]81%A8%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B%E3%80%82)
+
+- [alias](https://qiita.com/Hashimoto-Noriaki/items/4a682738503afc1f26ed)
+
+- [respond_to](https://qiita.com/hirokihello/items/79b744fed026e199a07f)
 
 ## プログラミングの考え方編
 
@@ -223,3 +244,41 @@ ASで名前づけ
 - APIを使ってフロントと繋いでいる場合はディベロッパーツールのネットワークタブも確認してAPIの返してる値や、エラー出ていないかチェックする
 
 - Rails.logger.debugを使って格納されている値を確認していく
+
+### メモ
+```
+classメソッドとインスタンスメソッドの違い
+classメソッドは
+モデルに紐づく感じ
+なんか、モデルにSQLつける感じ的な
+形的にはorder.メソッド名的な
+SQLを付ける的な（scope）
+インスタンスメソッドは
+モデルとかに直接関係ないやつ
+エラーメッセージを定義して表示するとか
+ひとまとまりの動作の処理(注文キャンセルとか)
+形的にはif メソッド名的な
+```
+
+```
+責務別記載する内容
+モデルには、
+includeしてモジュールを読み込んでそれを使うことで
+複雑にならないようにしている＆責務の統一化
+また、定数を定義してモデル内で使ったりもする
+後は、アソシエーション関係とバリデーションとclassメソッド
+また、モジュールは下記階層に置く
+app/models/concerns配下
+また、モジュール内には
+extend ActiveSupport::Concernを使うことで、
+インスタンスメソッドじゃなくclassメソッドのように呼び出すことが可能になる
+なおあまり見た感じ呼びだしているイメージはなさそうだけど、お作法的なので
+割とモジュール内には書いているイメージ
+
+コントローラー内では
+ストロングパラメーターとアクション(index,create)
+また、アクション内にはコメントアウトでURLも記載する
+また、定数を定義してコントローラー内で使ったりもする
+また、インスタンスメソッドなども記載
+before_actionも記載する 
+```
