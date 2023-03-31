@@ -56,7 +56,11 @@
 - [delegateの使い方](https://sakurawi.hateblo.jp/entry/delegate)
 
 
-### SQLを扱うならここら辺押さえておくと良さそう
+### SQLを扱うならここら辺押さえておくと良さそう  
+(基本的にRailsに既存であるメソッドでSQLを組むことを推奨)<br>
+(どうしても厳しい場合や複雑なSQLを組むときはプレースホルダー等を用いて動的に変更できるようなSQLを書いていく)
+
+- [SQLの基本を覚える](https://qiita.com/chida09/items/d4b33a28b918958f267f)
 
 - N+1対策はここら辺を使えば問題ない（includes・preload・eager_load）
 
@@ -68,11 +72,9 @@
 - [ActiveRecordにおけるGROUP BYの使い方](https://qiita.com/yuyasat/items/e26bcf0eb2c89c63db9d)
 - [orderで関連テーブルのカラムで並び替え](https://zenn.dev/a_da_chi/articles/a2d08c17347289)
 
-- [where](https://www.sejuku.net/blog/13363)
+- [where](https://www.sejuku.net/blog/13363)⇒
+[詳細](https://github.com/junichmiyahara/Rails_Practice/issues/11)
 
- 割とwhereはこんな書き方をするのが多いイメージ(User.where("name = ?", @name))
-
- whereを複数使うやり方(User.where(kind: 0).where(name: ‘yamada’))
 
 - [論理削除したデータを扱う](https://www.task-notes.com/entry/20170813/1502618254)
 
@@ -83,11 +85,6 @@
 - [SQLをRailsで扱う時の色々な便利なもの](https://qiita.com/yut_h1979/items/4cb3d9a3b3fc87ca0435)
 
 - [find_by_sqlでRailsから生SQLクエリを直接実行する](https://qiita.com/natsuokawai/items/7bc330e9a6f6f4ef0359)
-
-  (基本的にRailsに既存であるメソッドでSQLを組むことを推奨)
-
-
-  (どうしても厳しい場合や複雑なSQLを組むときはプレースホルダー等を用いて動的に変更できるようなSQLを書いていく)
   
 - [GROUP BY](https://qiita.com/yuyasat/items/e26bcf0eb2c89c63db9d)
   
@@ -233,41 +230,3 @@
 - Rails.logger.debugを使って格納されている値を確認していく
 
 ### メモ
-```
-classメソッドとインスタンスメソッドの違い
-classメソッドは
-モデルに紐づく感じ
-なんか、モデルにSQLつける感じ的な
-形的にはorder.メソッド名的な
-SQLを付ける的な（scope）
-インスタンスメソッドは
-モデルとかに直接関係ないやつ
-エラーメッセージを定義して表示するとか
-ひとまとまりの動作の処理(注文キャンセルとか)
-形的にはif メソッド名的な
-```
-
-```
-責務別記載する内容
-モデルには、
-includeしてモジュールを読み込んでそれを使うことで
-複雑にならないようにしている＆責務の統一化
-また、定数を定義してモデル内で使ったりもする
-後は、アソシエーション関係とバリデーションとclassメソッド
-また、モジュールは下記階層に置く
-app/models/concerns配下
-また、モジュール内には
-extend ActiveSupport::Concernを使うことで、
-インスタンスメソッドじゃなくclassメソッドのように呼び出すことが可能になる
-なおあまり見た感じ呼びだしているイメージはなさそうだけど、お作法的なので
-割とモジュール内には書いているイメージ
-
-コントローラー内で記載する内容
-ストロングパラメーターとアクション(index,create等)
-アクションの上にはコメントアウトでURLも記載する
-また、一番上で定数を定義してコントローラー内で使ったりもする
-また、インスタンスメソッドなども記載
-before_actionも記載する 
-
-共通の処理はapplication_controller.rbに記載する
-```
