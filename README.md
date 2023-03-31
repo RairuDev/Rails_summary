@@ -63,18 +63,7 @@
 - [ActiveRecordのjoinsとpreloadとincludesとeager_loadの違い](https://qiita.com/k0kubun/items/80c5a5494f53bb88dc58)
 
 - [joins](https://qiita.com/yuyasat/items/c2ad37b5a24a58ee3d30)
-
-- この記事も良さそう[joinsメソッドの使い方 ~ テーブル結合からネストまで学ぶ](https://pikawaka.com/rails/joins)
-
-- joinsの注意点(joinsメソッドの基本的な使い方は、joinsメソッドを実行したモデルのレコードを取得するもので関連付けしたデータは取得していない)
-
-- joinsでリレーション先のテーブルのカラムを取得する方法
-```
-モデル名.joins(:アソシエーションの名前).select("アソシエーションの名前.取得したいカラム名")
-カラム名がかぶる場合は、select内で名前付けをする。
-ASで名前づけ
-モデル名.joins(:アソシエーションの名前).select("アソシエーションの名前.取得したいカラム名 AS 任意の名前")
-```
+[詳細](https://github.com/junichmiyahara/Rails_Practice/issues/11)
 
 - [ActiveRecordにおけるGROUP BYの使い方](https://qiita.com/yuyasat/items/e26bcf0eb2c89c63db9d)
 - [orderで関連テーブルのカラムで並び替え](https://zenn.dev/a_da_chi/articles/a2d08c17347289)
