@@ -62,7 +62,7 @@
 
 - [ActiveRecordのjoinsとpreloadとincludesとeager_loadの違い](https://qiita.com/k0kubun/items/80c5a5494f53bb88dc58)
 
-- [joins](https://qiita.com/yuyasat/items/c2ad37b5a24a58ee3d30)
+- [joins](https://qiita.com/yuyasat/items/c2ad37b5a24a58ee3d30)⇒
 [詳細](https://github.com/junichmiyahara/Rails_Practice/issues/11)
 
 - [ActiveRecordにおけるGROUP BYの使い方](https://qiita.com/yuyasat/items/e26bcf0eb2c89c63db9d)
