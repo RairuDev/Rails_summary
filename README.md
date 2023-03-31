@@ -156,6 +156,8 @@
 
 - [include](https://style.potepan.com/articles/16207.html)※モジュールと使うことが多い
 
+- [includeとextendsの違い](https://www.task-notes.com/entry/20170425/1493047290)
+
 - [Transaction](https://qiita.com/huydx/items/d946970d130b7dabe7ec)
 
 - [Redis](https://openstandia.jp/oss_info/redis/)
