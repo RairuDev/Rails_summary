@@ -73,7 +73,7 @@
 - [orderで関連テーブルのカラムで並び替え](https://zenn.dev/a_da_chi/articles/a2d08c17347289)
 
 - [where](https://www.sejuku.net/blog/13363)⇒
-[詳細](https://github.com/junichmiyahara/Rails_Practice/issues/11)
+[詳細](https://github.com/junichmiyahara/Rails_Practice/issues/12)
 
 
 - [論理削除したデータを扱う](https://www.task-notes.com/entry/20170813/1502618254)
