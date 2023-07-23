@@ -54,15 +54,19 @@
 
   - [scope](https://qiita.com/ngron/items/14a39ce62c9d30bf3ac3)
 
-  - [Railsで別名の外部キーを設定する方法](https://qiita.com/j-sunaga/items/ee1fb558807c04243f0f)
+  - [Railsで別名の外部キーを設定する方法](https://qiita.com/j-sunaga/items/ee1fb558807c04243f0f)⇨[詳細](https://github.com/RairuDev/Rails_Guide/issues/7)
 
-  - [polymorphic](https://qiita.com/sibakenY/items/7d984267995e8ce408c2)
+  - [polymorphic](https://qiita.com/sibakenY/items/7d984267995e8ce408c2)⇨[詳細](https://github.com/RairuDev/Rails_Guide/issues/8)
 
   - [inverse_of](https://www.sejuku.net/blog/66868)
 
   - [accepts_nested_attributes_for](https://qiita.com/HIROKOBA/items/35b636005311b8384278)
 
-  - [delegateの使い方](https://sakurawi.hateblo.jp/entry/delegate)
+  - [delegateの使い方](https://sakurawi.hateblo.jp/entry/delegate)⇨[詳細](https://github.com/RairuDev/Rails_Guide/issues/10)
+
+  - [バリデーションまとめ](https://qiita.com/h1kita/items/772b81a1cc066e67930e)
+
+    - [バリデーションでifを使って制御する方法](https://github.com/RairuDev/Rails_Guide/issues/9)
 
 #### SQLを扱うならここら辺押さえておくと良さそう
   - 基本的にRailsに既存であるメソッドでSQLを組むことを推奨<br>
@@ -199,7 +203,7 @@
 
   - [respond_to](https://qiita.com/hirokihello/items/79b744fed026e199a07f)
 
-  - [インスタンスメソッドとクラスメソッドの使い分け]()
+  - [インスタンスメソッドとクラスメソッドの使い分け](https://github.com/RairuDev/Rails_Guide/issues/13)
 
 ### プログラミングの考え方
 
@@ -261,4 +265,4 @@
     - エラー周りは特にソースコードを日本語に翻訳できるくらい理解しよう
 
 #### 最後に
-どんなに辛くても必ず諦めずに、決して思考を停止しないでください
+どんなに辛くても諦めずに、決して思考を停止しないでください
