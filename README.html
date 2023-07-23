@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="%E5%AE%9F%E5%8B%99%E3%81%A7%E5%AD%A6%E3%82%93%E3%81%A0%E3%81%82%E3%82%8C%E3%81%93%E3%82%8C">実務で学んだあれこれ</h2>
+<h3 id="%E5%AE%9F%E5%8B%99%E3%81%AB%E5%8F%96%E3%82%8A%E6%8E%9B%E3%81%8B%E3%82%8B%E3%81%AB%E3%81%82%E3%81%9F%E3%81%A3%E3%81%A6%E3%81%AE%E5%BF%83%E6%A7%8B%E3%81%88">実務に取り掛かるにあたっての心構え</h3>
+<h4 id="1%E4%BA%BA%E3%81%A7%E6%82%A9%E3%81%BF%E3%81%99%E3%81%8E%E3%81%AA%E3%81%84">1人で悩みすぎない</h4>
+<ul>
+<li>
+<p>実務は基本的に期日があるので、悩みすぎてスケジュールが遅れるのが1番迷惑となります。</p>
+<ul>
+<li>
+<p>報告は細かくしていき、また遅れているときは遅れている原因も一緒に報告できたら〇</p>
+</li>
+<li>
+<p>エラーで煮詰まった時や実装が全くわからない時は、一旦休憩しましょう！！</p>
+</li>
+<li>
+<p>辛い時は溜め込まずに誰かに相談しよう！！</p>
+</li>
+<li>
+<p>仕様については考えてもわからないのでどんどん質問しましょう</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="%E6%80%A5%E3%81%84%E3%81%A7%E3%82%8B%E6%99%82%E3%81%93%E3%81%9D%E6%85%8C%E3%81%A6%E3%81%9A%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%82%92">急いでる時こそ慌てずに確認を</h4>
+<ul>
+<li>
+<p>経験上焦って実装や連絡しても余計に遠回りになる可能性の方が高いです</p>
+</li>
+<li>
+<p>中途半端な実装をすると逆に先方の方の信用を落としかねないので、気をつけましょう</p>
+</li>
+</ul>
+<h4 id="%E4%BA%BA%E3%81%AB%E8%B3%AA%E5%95%8F%E3%81%99%E3%82%8B%E3%81%A8%E3%81%8D%E3%81%AF%E3%82%8F%E3%81%8B%E3%82%8A%E3%82%84%E3%81%99%E3%81%8F%E7%B0%A1%E6%BD%94%E3%81%AB">人に質問するときはわかりやすく簡潔に</h4>
+<ul>
+<li>
+<p>先輩たちの時間を奪わないように分かりやすく！！</p>
+<ul>
+<li>
+<p>ポイントとしては結論から話す事や太字・句読点・改行を使って文字が詰め詰めにならないように！！</p>
+</li>
+<li>
+<p>エラーの場合はエラーログを調べてから質問をする</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="%E5%85%88%E6%96%B9%E3%81%B8%E3%81%AEpr%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E3%81%A8%E3%81%8D%E3%81%93%E3%82%8C%E3%81%A0%E3%81%91%E3%81%AF%E7%A2%BA%E8%AA%8D%E3%81%97%E3%82%88%E3%81%86">先方へのPRを作成するときこれだけは確認しよう!!</h4>
+<ul>
+<li>
+<p>コミットメッセージは綺麗で適切か？</p>
+</li>
+<li>
+<p>そもそも仕様をもれなく満たしているか？</p>
+</li>
+<li>
+<p>ブランチ名に問題はないか？</p>
+</li>
+<li>
+<p>PRを作成する先を間違ってはいないか？</p>
+</li>
+<li>
+<p>ソースコードの書き方(詳細下記)に記載のあるものは全部問題ないか？</p>
+</li>
+</ul>
+<h4 id="%E3%83%81%E3%82%B1%E3%83%83%E3%83%88%E3%81%AB%E5%8F%96%E3%82%8A%E6%8E%9B%E3%81%8B%E3%82%8B%E5%89%8D%E3%81%AB">チケットに取り掛かる前に</h4>
+<ul>
+<li>
+<p><a href="https://qiita.com/jnchito/items/017487cd882091494298">【新人プログラマ応援】開発タスクをアサインされたらどういう手順で進めるべきか</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/Kirika/items/42d66e17d39fe944bf9d">Railsの案件にジョインしたときに、何を足掛かりにすべきか</a></p>
+</li>
+</ul>
+<h3 id="%E4%BE%BF%E5%88%A9%E3%81%AA%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E7%AD%89%E3%81%AE%E3%81%BE%E3%81%A8%E3%82%81rubyrails">便利なメソッド等のまとめ(Ruby,Rails)</h3>
+<h4 id="%E3%83%A2%E3%83%87%E3%83%AB%E3%83%BBdb%E3%83%AA%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%91%A8%E3%82%8A%E3%81%AF%E3%81%93%E3%81%93%E3%82%89%E8%BE%BA%E6%8A%BC%E3%81%95%E3%81%88%E3%81%A6%E3%81%8A%E3%81%8F%E3%81%A8%E8%89%AF%E3%81%95%E3%81%9D%E3%81%86">モデル・DB（リレーション）周りはここら辺押さえておくと良さそう</h4>
+<ul>
+<li>
+<p><a href="https://qiita.com/ngron/items/14a39ce62c9d30bf3ac3">scope</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/j-sunaga/items/ee1fb558807c04243f0f">Railsで別名の外部キーを設定する方法</a>⇨<a href="https://github.com/RairuDev/Rails_Guide/issues/7">詳細</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/sibakenY/items/7d984267995e8ce408c2">polymorphic</a>⇨<a href="https://github.com/RairuDev/Rails_Guide/issues/8">詳細</a></p>
+</li>
+<li>
+<p><a href="https://www.sejuku.net/blog/66868">inverse_of</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/HIROKOBA/items/35b636005311b8384278">accepts_nested_attributes_for</a></p>
+</li>
+<li>
+<p><a href="https://sakurawi.hateblo.jp/entry/delegate">delegateの使い方</a>⇨<a href="https://github.com/RairuDev/Rails_Guide/issues/10">詳細</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/h1kita/items/772b81a1cc066e67930e">バリデーションまとめ</a></p>
+<ul>
+<li><a href="https://github.com/RairuDev/Rails_Guide/issues/9">バリデーションでifを使って制御する方法</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="sql%E3%82%92%E6%89%B1%E3%81%86%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%E3%82%89%E8%BE%BA%E6%8A%BC%E3%81%95%E3%81%88%E3%81%A6%E3%81%8A%E3%81%8F%E3%81%A8%E8%89%AF%E3%81%95%E3%81%9D%E3%81%86">SQLを扱うならここら辺押さえておくと良さそう</h4>
+<ul>
+<li>
+<p>基本的にRailsに既存であるメソッドでSQLを組むことを推奨<br></p>
+<ul>
+<li>どうしても厳しい場合や複雑なSQLを組むときは、
+プレースホルダー等を用いて動的に変更できるようなSQLを書いていく</li>
+</ul>
+</li>
+<li>
+<p><a href="https://qiita.com/chida09/items/d4b33a28b918958f267f">SQLの基本を覚える</a></p>
+</li>
+<li>
+<p>N+1対策はここら辺を使えば問題ない（includes・preload・eager_load）</p>
+</li>
+<li>
+<p><a href="https://qiita.com/k0kubun/items/80c5a5494f53bb88dc58">ActiveRecordのjoinsとpreloadとincludesとeager_loadの違い</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/yuyasat/items/c2ad37b5a24a58ee3d30">joins</a>⇒<a href="https://github.com/junichmiyahara/Rails_Practice/issues/11">詳細</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/yuyasat/items/e26bcf0eb2c89c63db9d">ActiveRecordにおけるGROUP BYの使い方</a></p>
+</li>
+<li>
+<p><a href="https://zenn.dev/a_da_chi/articles/a2d08c17347289">orderで関連テーブルのカラムで並び替え</a></p>
+</li>
+<li>
+<p><a href="https://www.sejuku.net/blog/13363">where</a>⇒<a href="https://github.com/junichmiyahara/Rails_Practice/issues/12">詳細</a></p>
+</li>
+<li>
+<p><a href="https://www.task-notes.com/entry/20170813/1502618254">論理削除したデータを扱う</a></p>
+</li>
+<li>
+<p><a href="https://blog.logicoffee.tech/posts/programming/scoped-association.html">関連テーブルの条件をON句に書きたい！</a></p>
+</li>
+<li>
+<p><a href="https://mikamisan.hatenablog.com/entry/2017/09/26/223137">present?とexists?のSQLでデータ取得する際のパフォーマンスの違い</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/yut_h1979/items/4cb3d9a3b3fc87ca0435">SQLをRailsで扱う時の色々な便利なもの</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/natsuokawai/items/7bc330e9a6f6f4ef0359">find_by_sqlでRailsから生SQLクエリを直接実行する</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/yuyasat/items/e26bcf0eb2c89c63db9d">GROUP BY</a></p>
+</li>
+</ul>
+<h4 id="%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E4%BE%BF%E5%88%A9%E3%81%AA%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89">その他の便利なメソッド</h4>
+<ul>
+<li>
+<p>pluck</p>
+</li>
+<li>
+<p>all?</p>
+</li>
+<li>
+<p><a href="https://pikawaka.com/ruby/map">map</a></p>
+<ul>
+<li><a href="https://qiita.com/s_tatsuki/items/869af9c0c33d9d650f3f">mapは体感(&amp;:)の書き方が多い</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://materializer.co/lab/blog/27">Railsで変数の中身が空か確認する空チェックメソッド4種</a></p>
+</li>
+<li>
+<p>to_sql→ActiveRecordのオブジェクトに対して使うことでSQLを見ることができる</p>
+<ul>
+<li>主にデバックで使用</li>
+</ul>
+</li>
+<li>
+<p>inspect→ActiveRecordのオブジェクトに対して使うことでオブジェクトの中身を確認できる</p>
+<ul>
+<li>主にデバックで使用する・めっちゃおすすめ
+例：<code>User.find(1).inspect</code></li>
+</ul>
+</li>
+<li>
+<p><a href="https://satoru103.hatenablog.com/entry/2020/02/09/225503">配列の要素と何番目にあるかを一緒に取り出す_each_with_indexメソッド</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/yoshi_4/items/e987b698c1978d248cfc">ぼっち演算子でNIlエラーを回避する</a>(割と使う)</p>
+</li>
+<li>
+<p><a href="https://qiita.com/TerToEer_sho/items/c445bad0a9726030d24c">merge</a></p>
+</li>
+<li>
+<p><a href="https://sakaishun.com/2022/03/25/rails-escape-view-tag">html_safe</a></p>
+</li>
+<li>
+<p><a href="https://teratail.com/questions/168508">eachは空の配列[]でも対応可能だから、条件分岐等で場合分けは不要</a></p>
+</li>
+</ul>
+<h4 id="%E3%81%9D%E3%81%AE%E4%BB%96%E5%AE%9F%E5%8B%99%E3%81%A7%E8%A6%8B%E3%81%9F%E3%81%82%E3%82%8C%E3%81%93%E3%82%8C">その他実務で見たあれこれ</h4>
+<ul>
+<li>
+<p><a href="https://qiita.com/port-development/items/61c0f74c123955f45f8e">バッチの実行方法などで使う(rails-runner)</a></p>
+</li>
+<li>
+<p><a href="http://nomnel.net/blog/rails-runner-keyword-arg/">rails-runnerに引数を持たせる方法</a></p>
+</li>
+<li>
+<p><a href="http://319ring.net/blog/archives/2179/">CanCanCanで特定のユーザーがアクセスできるリソースを制限する</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/ykemoemo/items/b2c5c68f853a5cc91446">decoratorの使い方</a></p>
+<ul>
+<li>（例）Viewに関係するメソッドでかつModelに関係するメソッドの記述
+ユーザーの名前とかのフォーマットetc</li>
+</ul>
+</li>
+<li>
+<p><a href="https://zenn.dev/emono/articles/8211ad5ec036e9">Serializers</a>※重要JSONとしてデータを返す時によく使う</p>
+</li>
+<li>
+<p><a href="https://qiita.com/Hassan/items/0e034a1d42b2335936e6">attr_accessor</a></p>
+<ul>
+<li>Railsでのマイグレーションファイルを作成する際にも自動で使われているはず
+<code>User.name</code>で値を取得したり書き換えたりできるのは<code>attr_accessor</code>のおかげ</li>
+</ul>
+</li>
+<li>
+<p><a href="https://qiita.com/Kta-M/items/bd4ba36a58ad602a9d8b">I18nで日本語化まとめ</a></p>
+</li>
+<li>
+<p><a href="https://takuyan.hatenablog.com/entry/20111120/1321741426">i18nで引数を渡して動的にする</a></p>
+</li>
+<li>
+<p><a href="https://wa3.i-3-i.info/word191.html">ラッパークラスの概念</a></p>
+</li>
+<li>
+<p><a href="https://zenn.dev/media_engine/articles/early_return">早期returnを使って無駄な処理をしない</a>※記事はJSだけどRubyでもある</p>
+</li>
+<li>
+<p><a href="https://uxmilk.jp/22979">breakで処理を途中で抜ける</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/shiopon01/items/fd6803f792398c5219cd">RubyのModuleの使い方</a></p>
+<ul>
+<li>モジュール内で名前空間やインスタンスの生成で<code>initialize</code>をよく使う</li>
+</ul>
+</li>
+<li>
+<p><a href="https://qiita.com/tomokichi_ruby/items/e71881fbffa1fb598a48">名前空間</a></p>
+<ul>
+<li>同じ名前であることによるコンフリクト(衝突)が起きないように
+「どこに属するメソッド、変数ですか？」というのを明記する仕組み
+例：<code>puts Math::PI</code>でMathモジュールの定数PIを呼び出す</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.sejuku.net/blog/21170">initialize</a></p>
+<ul>
+<li>個人的にはモジュールとセットで使う印象
+また、インスタンスを作成する時に使う印象が強い</li>
+</ul>
+</li>
+<li>
+<p><a href="https://qiita.com/TomoProg/items/23027a866beac66a40c6">class &lt;&lt; self</a></p>
+</li>
+<li>
+<p><a href="https://lanlib.com/2021/04/04/rails-concern%e3%81%ae%e4%bd%bf%e3%81%84%e6%96%b9/">concern</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/h-shima/items/d772b4cbe7368ddb8255">ActiveSupport::Concern</a></p>
+</li>
+<li>
+<p><a href="https://style.potepan.com/articles/16207.html">include</a>
+※モジュール内で使うことが多い</p>
+</li>
+<li>
+<p><a href="https://www.task-notes.com/entry/20170425/1493047290">includeとextendsの違い</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/huydx/items/d946970d130b7dabe7ec">Transaction</a></p>
+</li>
+<li>
+<p><a href="https://openstandia.jp/oss_info/redis/">Redis</a></p>
+</li>
+<li>
+<p><a href="https://dev.icare.jpn.com/dev_cat/sidekiq/">sidekiq</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/ngron/items/4c319ae7340b72c7e566">例外処理の書き方</a></p>
+</li>
+<li>
+<p><a href="https://blog.toshimaru.net/ruby-standard-error/">Rubyで独自例外を定義するときはStandardErrorを継承する</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/hththt/items/07136ad74127999df271">Cookieとセッションをちゃんと理解する</a></p>
+</li>
+<li>
+<p><a href="https://www.htmq.com/webstorage/">Web Storage</a></p>
+</li>
+<li>
+<p><a href="https://www.sejuku.net/blog/62009">update_attributes</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/yukiyan/items/39f945c55b6dc5e11ed7">freeze</a></p>
+</li>
+<li>
+<p><a href="https://26gram.com/private-protected-in-ruby#:~:text=%E8%A8%AD%E5%AE%9A%E3%81%95%E3%82%8C%E3%82%5B%E2%80%A6%5D81%A8%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B%E3%80%82">private と protected の使い方まとめ</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/Hashimoto-Noriaki/items/4a682738503afc1f26ed">alias</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/hirokihello/items/79b744fed026e199a07f">respond_to</a></p>
+</li>
+<li>
+<p><a href="https://github.com/RairuDev/Rails_Guide/issues/13">インスタンスメソッドとクラスメソッドの使い分け</a></p>
+</li>
+</ul>
+<h3 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9">プログラミングの考え方</h3>
+<h4 id="rails%E3%81%AE%E8%A8%AD%E8%A8%88">Railsの設計</h4>
+<ul>
+<li><a href="https://qiita.com/ktsujichan/items/2899d337ecbd90474c46">中／大規模開発のためのRails設計パターン</a></li>
+</ul>
+<h4 id="%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9">ソースコードの書き方</h4>
+<ul>
+<li>
+<p>変数名は既存と命名規則等合わせる</p>
+</li>
+<li>
+<p>unlessを多用しないようにする</p>
+<ul>
+<li>unlessは読みにくいです</li>
+</ul>
+</li>
+<li>
+<p>条件分岐をネストしすぎない</p>
+</li>
+<li>
+<p>自分の書いたコードが影響範囲はないかを確認する</p>
+<ul>
+<li>既存の機能が動かなくなることがたまにあります</li>
+</ul>
+</li>
+<li>
+<p>配列等の変数名は複数形を使う</p>
+</li>
+<li>
+<p>boolean値を変数として保存する際は、変数名の先頭にis_をつける</p>
+</li>
+<li>
+<p>N＋1が起こらないようにする</p>
+</li>
+<li>
+<p>同じようなソースコードを何個も書いていないか(重複してる内容はメソッド化する)</p>
+</li>
+<li>
+<p>基本的に1つのファイルに責務は1つにする</p>
+</li>
+<li>
+<p>ディレクトリを作成する際は関連する処理をまとめるようにすると良い(errors・scope・jobs等)</p>
+</li>
+<li>
+<p>基本的に既存のコードに合わせる形で実装しましょう</p>
+</li>
+</ul>
+<h4 id="%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E8%AA%AD%E3%81%BF%E6%96%B9">ソースコードの読み方</h4>
+<ul>
+<li>
+<p>メソッドジャンプを使用して処理の流れを1つづつ理解</p>
+</li>
+<li>
+<p>Rails.logger.debugを使って処理の流れとは格納されている値を確認していく</p>
+</li>
+<li>
+<p>あるページに対応するファイルを探すときは、日本語・特別な処理など、なるべく固有なもので全体検索かける</p>
+</li>
+</ul>
+<h4 id="%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AE%E5%AF%BE%E5%87%A6%E6%B3%95">エラーの対処法</h4>
+<ul>
+<li>
+<p>エラーが出たときはバックエンドorフロントエンドどちらでエラーが出ているかを確認する</p>
+</li>
+<li>
+<p>フロント側ならコンソールを確認・バックエンド側ならログを確認</p>
+</li>
+<li>
+<p>ログを確認してどこまで処理が通って、どこでコケているのか確認する</p>
+</li>
+<li>
+<p>APIを使ってフロントと繋いでいる場合はディベロッパーツールのネットワークタブも確認してAPIの返してる値や、エラー出ていないかチェックする</p>
+</li>
+<li>
+<p>Rails.logger.debugを使って格納されている値を確認していく</p>
+</li>
+<li>
+<p>返り値を意識すると尚いい</p>
+<ul>
+<li>ActiveRecordのオブジェクトが返される等、どのような値が返されているのかを確認</li>
+</ul>
+</li>
+<li>
+<p>エラーに限らずだが、処理の内容を1行づつ理解することが大事</p>
+<ul>
+<li>エラー周りは特にソースコードを日本語に翻訳できるくらい理解しよう</li>
+</ul>
+</li>
+</ul>
+<h4 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h4>
+<p>どんなに辛くても諦めずに、決して思考を停止しないでください</p>
+
+</body>
+</html>
