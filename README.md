@@ -52,7 +52,7 @@
 
 #### モデル・DB（リレーション）周りはここら辺押さえておくと良さそう
 
-  - [scope](https://qiita.com/ngron/items/14a39ce62c9d30bf3ac3)
+  - [scope](https://qiita.com/ngron/items/14a39ce62c9d30bf3ac3)⇨[詳細](https://github.com/RairuDev/Rails_Guide/issues/5)
 
   - [Railsで別名の外部キーを設定する方法](https://qiita.com/j-sunaga/items/ee1fb558807c04243f0f)⇨[詳細](https://github.com/RairuDev/Rails_Guide/issues/7)
 
