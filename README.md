@@ -115,8 +115,9 @@
     - 主にデバックで使用
 
   - inspect→ActiveRecordのオブジェクトに対して使うことでオブジェクトの中身を確認できる
-    - 主にデバックで使用する・めっちゃおすすめ
-    例：`User.find(1).inspect`
+    - 主にデバックで使用する
+      - めっちゃおすすめ<br>
+      例：`User.find(1).inspect`
 
   - [配列の要素と何番目にあるかを一緒に取り出す_each_with_indexメソッド](https://satoru103.hatenablog.com/entry/2020/02/09/225503)
 
