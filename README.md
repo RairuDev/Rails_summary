@@ -138,12 +138,12 @@
   - [CanCanCanで特定のユーザーがアクセスできるリソースを制限する](http://319ring.net/blog/archives/2179/)
 
   - [decoratorの使い方](https://qiita.com/ykemoemo/items/b2c5c68f853a5cc91446)
-    - （例）Viewに関係するメソッドでかつModelに関係するメソッドの記述
+    - （例）Viewに関係するメソッドでかつModelに関係するメソッドの記述<br>
         ユーザーの名前とかのフォーマットetc
   - [Serializers](https://zenn.dev/emono/articles/8211ad5ec036e9)※重要JSONとしてデータを返す時によく使う
 
   - [attr_accessor](https://qiita.com/Hassan/items/0e034a1d42b2335936e6)
-     - Railsでのマイグレーションファイルを作成する際にも自動で使われているはず
+     - Railsでのマイグレーションファイルを作成する際にも自動で使われているはず<br>
         `User.name`で値を取得したり書き換えたりできるのは`attr_accessor`のおかげ
 
   - [I18nで日本語化まとめ](https://qiita.com/Kta-M/items/bd4ba36a58ad602a9d8b)
@@ -160,12 +160,12 @@
     - モジュール内で名前空間やインスタンスの生成で`initialize`をよく使う
 
   - [名前空間](https://qiita.com/tomokichi_ruby/items/e71881fbffa1fb598a48)
-    - 同じ名前であることによるコンフリクト(衝突)が起きないように
-    「どこに属するメソッド、変数ですか？」というのを明記する仕組み
+    - 同じ名前であることによるコンフリクト(衝突)が起きないように<br>
+    「どこに属するメソッド、変数ですか？」というのを明記する仕組み<br>
     例：`puts Math::PI`でMathモジュールの定数PIを呼び出す
 
   - [initialize](https://www.sejuku.net/blog/21170)
-    - 個人的にはモジュールとセットで使う印象
+    - 個人的にはモジュールとセットで使う印象<br>
     また、インスタンスを作成する時に使う印象が強い
 
   - [class << self](https://qiita.com/TomoProg/items/23027a866beac66a40c6)
@@ -224,7 +224,7 @@
 
   - 配列等の変数名は複数形を使う
 
-  - boolean値を変数として保存する際は、変数名の先頭にis_をつける
+  - boolean値を変数として格納する際は、変数名の先頭にis_をつける
 
   - N＋1が起こらないようにする
 
@@ -240,7 +240,7 @@
 
   - メソッドジャンプを使用して処理の流れを1つづつ理解
 
-  - Rails.logger.debugを使って処理の流れとは格納されている値を確認していく
+  - Rails.logger.debugを使って処理の流れと格納されている値を確認していく
 
   - あるページに対応するファイルを探すときは、日本語・特別な処理など、なるべく固有なもので全体検索かける
 
